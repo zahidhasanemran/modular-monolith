@@ -20,8 +20,9 @@ const eslintConfig = defineConfig([
       "boundaries/elements": [
         {
           type: "modules",
-          pattern: "src/modules/**/*",
+          pattern: "src/modules/*/**/*",
           mode: "full",
+          capture: ["moduleName"],
         },
         {
           type: "shared",
@@ -42,7 +43,15 @@ const eslintConfig = defineConfig([
             },
             {
               from: { type: "modules" },
-              allow: { to: { type: ["shared"] } },
+              allow: [
+                { to: { type: ["shared"] } },
+                {
+                  to: {
+                    type: ["modules"],
+                    captured: { moduleName: "{{from.captured.moduleName}}" },
+                  },
+                },
+              ],
             },
           ],
         },
