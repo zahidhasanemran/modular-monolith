@@ -1,5 +1,5 @@
 import { isUserLoggedIn } from "@/modules/authentication";
-import type { loggedInUserType } from "@/types";
+import type { loggedInUserType } from "@/modules/user";
 import React from "react";
 
 export const OrderDetails = () => {

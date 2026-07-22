@@ -1,6 +1,6 @@
 import { isUserLoggedIn } from "@/modules/authentication";
 import type { Product } from "@/modules/catalog/domain/catalog.types";
-import type { loggedInUserType } from "@/types";
+import type { loggedInUserType } from "@/modules/user";
 
 export const ProductCard = ({ product }: { product: Product }) => {
   const isLoggedIn: loggedInUserType = isUserLoggedIn();

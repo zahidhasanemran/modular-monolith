@@ -1,1 +1,1 @@
-export type loggedInUserType = boolean;
+
