@@ -97,7 +97,7 @@
 *   - shopping-cart
 *   - reviews
 *   - track-order
-*   - settings 
+*   - users 
 * shared
 *   - libs
 *   - utils
