@@ -62,6 +62,9 @@ const eslintConfig = defineConfig([
                 },
               ],
             },
+            {
+              allow: { dependency: { kind: "type" } },
+            },
           ],
         },
       ],
