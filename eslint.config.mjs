@@ -4,19 +4,11 @@ import nextTs from "eslint-config-next/typescript";
 import boundaries from "eslint-plugin-boundaries";
 
 const eslintConfig = defineConfig([
-  // Core Next.js & TypeScript configurations
   ...nextVitals,
   ...nextTs,
 
-  globalIgnores([
-    // Default ignores of eslint-config-next:
-    ".next/**",
-    "out/**",
-    "build/**",
-    "next-env.d.ts",
-  ]),
+  globalIgnores([".next/**", "out/**", "build/**", "next-env.d.ts"]),
 
-  // Boundaries & custom settings/rules
   {
     plugins: { boundaries },
     settings: {
@@ -26,8 +18,16 @@ const eslintConfig = defineConfig([
         },
       },
       "boundaries/elements": [
-        { type: "modules", pattern: "src/modules/**/*", mode: "full" },
-        { type: "shared", pattern: "src/shared/**/*", mode: "full" },
+        {
+          type: "modules",
+          pattern: "src/modules/**/*",
+          mode: "full",
+        },
+        {
+          type: "shared",
+          pattern: "src/shared/**/*",
+          mode: "full",
+        },
       ],
     },
     rules: {
