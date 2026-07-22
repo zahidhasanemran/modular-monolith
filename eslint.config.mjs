@@ -19,6 +19,11 @@ const eslintConfig = defineConfig([
       },
       "boundaries/elements": [
         {
+          type: "authentication",
+          pattern: "src/modules/authentication/**/*",
+          mode: "full",
+        },
+        {
           type: "modules",
           pattern: "src/modules/*/**/*",
           mode: "full",
@@ -38,13 +43,17 @@ const eslintConfig = defineConfig([
           default: "disallow",
           rules: [
             {
+              from: { type: "authentication" },
+              allow: { to: { type: ["shared", "authentication"] } },
+            },
+            {
               from: { type: "shared" },
               allow: { to: { type: ["shared"] } },
             },
             {
               from: { type: "modules" },
               allow: [
-                { to: { type: ["shared"] } },
+                { to: { type: ["shared", "authentication"] } },
                 {
                   to: {
                     type: ["modules"],
