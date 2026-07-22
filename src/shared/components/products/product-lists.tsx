@@ -1,5 +1,5 @@
 import type { Product } from "@/modules/catalog/domain/catalog.types";
-import { ProductCard } from "@/modules/catalog";
+import { ProductCard } from "@/shared/components/products";
 
 export const ProductLists = ({ products }: { products: Product[] }) => {
   return (

@@ -1,5 +1,5 @@
-import { products } from "@/modules/catalog";
-import { ProductCard } from "@/modules/catalog";
+import { products } from "@/data";
+import { ProductCard } from "@/shared/components/products";
 
 export const SearchedProductList = () => {
   return (

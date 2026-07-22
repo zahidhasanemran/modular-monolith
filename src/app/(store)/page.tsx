@@ -1,5 +1,5 @@
-import { ProductLists } from "@/modules/catalog";
-import { products } from "@/modules/catalog";
+import { ProductLists } from "@/shared/components/products";
+import { products } from "@/data";
 
 export default function Home() {
   return (
