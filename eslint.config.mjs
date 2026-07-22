@@ -42,7 +42,7 @@ const eslintConfig = defineConfig([
             },
             {
               from: { type: "modules" },
-              allow: { to: { type: ["modules", "shared"] } },
+              allow: { to: { type: ["shared"] } },
             },
           ],
         },
