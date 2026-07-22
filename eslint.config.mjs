@@ -35,6 +35,16 @@ const eslintConfig = defineConfig([
         "error",
         {
           default: "disallow",
+          rules: [
+            {
+              from: { type: "shared" },
+              allow: { to: { type: ["shared"] } },
+            },
+            {
+              from: { type: "modules" },
+              allow: { to: { type: ["modules", "shared"] } },
+            },
+          ],
         },
       ],
     },
